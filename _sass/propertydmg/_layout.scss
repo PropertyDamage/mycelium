@@ -165,7 +165,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit*0 0;
   flex: 1;
 }
 
@@ -236,10 +236,45 @@
   }
 }
 /**
- * Mycelium part stuff
+ *
+ * ███    ███ ██    ██  ██████ ███████ ██      ██ ██    ██ ███    ███     ██████   █████  ██████  ████████     ███████ ████████ ██    ██ ███████ ███████
+ * ████  ████  ██  ██  ██      ██      ██      ██ ██    ██ ████  ████     ██   ██ ██   ██ ██   ██    ██        ██         ██    ██    ██ ██      ██
+ * ██ ████ ██   ████   ██      █████   ██      ██ ██    ██ ██ ████ ██     ██████  ███████ ██████     ██        ███████    ██    ██    ██ █████   █████
+ * ██  ██  ██    ██    ██      ██      ██      ██ ██    ██ ██  ██  ██     ██      ██   ██ ██   ██    ██             ██    ██    ██    ██ ██      ██
+ * ██      ██    ██     ██████ ███████ ███████ ██  ██████  ██      ██     ██      ██   ██ ██   ██    ██        ███████    ██     ██████  ██      ██
  */
+span.lore {
+  padding: 2px 5px;
+  background: linear-gradient(to right, #323232, #545454);
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+span.warninglore {
+  padding: 2px 5px;
+  background: linear-gradient(to right, #93032e, #bb2552);
+  border-radius: 5px;
+  color: #ffffff;
+}
+// h1.myceliumtitlepagethingheader {
+//   flex-grow: 1;
+//   font-family: cursive;
+//   -webkit-font-smoothing: antialiased;
+//   text-rendering: optimizeLegibility;
+//   color: #ffffff;
+//   @include relative-font-size(10.00);
+// }
+//
+// div.myceliumtitlepagethingheader {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   flex-wrap: nowrap;
+// }
+
 .mycelium.post-list-heading {
   @include relative-font-size(1.75);
+  padding-top: 20px;
 }
 
 .mycelium.post-list {
@@ -247,6 +282,7 @@
   flex-direction: row;
   align-items: baseline;
   flex-wrap: wrap;
+  height: 300px;
 
   > div {
     display: flex;
@@ -320,33 +356,74 @@
   flex-direction: column;
   align-items: stretch;
   flex-wrap: nowrap;
-  height: 300px;
+  // height: 2160px;
+  > .stuff {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: cover;
+    background-origin: content-box;
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    filter: grayscale(0.8);
+    min-height: 300px;
+  }
 
-  > div {
+  > .can {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    min-height: 300px;
 
     &:nth-child(3n) {
-      background: #563535;
+      background: linear-gradient(217deg, #93032e, #93032e00 80%), linear-gradient(127deg, #bb2552, #bb255200 80%), linear-gradient(336deg, #86213f, #86213f00 80%);
+      // background: linear-gradient(90deg, transparent 20%, #93032e, transparent 80%);
+      // background: #93032e;
     }
 
     &:nth-child(3n + 2) {
-      background: #563535;
+      background: linear-gradient(217deg, #f3752b, #f3752b00 80%), linear-gradient(127deg, #f06e22, #f06e2200 80%), linear-gradient(336deg, #f0a579, #f0a57900 80%);
+      // background: linear-gradient(90deg, transparent 20%,#f3752b, transparent 80%);
+      // background: #f3752b;
     }
 
     &:nth-child(3n + 1) {
-      background: #563535;
+      background: linear-gradient(217deg, #88e94c, #88e94c00 80%), linear-gradient(127deg, #65cd24, #65cd2400 80%), linear-gradient(336deg, #a3de7e, #a3de7e00 80%);
+      // background: linear-gradient(90deg, transparent 20%,#e9b44c, transparent 80%);
+      // background: #e9b44c;
     }
 
-    > p {
-      display: inline-block;
+    p {
+      display: block;
       flex-grow: 1;
-      text-align: center;
+      text-align: justify;
       vertical-align: middle;
       margin: 0;
-      @include relative-font-size(1.50);
+      @include relative-font-size(1.20);
+    }
+  }
+
+  .tab {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 300px;
+    background: linear-gradient(to left, #1da1f2, #7289DA);
+
+    .left {
+      align-self: stretch;
+      padding: 10% 2%;
+      text-align: right;
+    }
+
+    .right {
+      align-self: stretch;
+      padding: 10% 2%;
+      text-align: left;
     }
   }
 }

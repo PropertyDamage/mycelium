@@ -6,29 +6,84 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-  <h2 class="mycelium post-list-heading">Devblogs</h2>
-  <div class="mycelium post-list">
-    {%- for post in site.posts limit:2-%}
-    <div>
-      <div>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="mycelium post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="mycelium post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        <a class="mycelium post-read" href="{{ post.url | relative_url }}">
-          -read more-
-        </a>
-        {%- endif -%}
-      </div>
-    </div>
-    {%- endfor -%}
+  <!-- This is just so we can stretch out the stuffs you can do, we destroy the wrapper -->
+</div>
+</div>
+<!-- <div class="myceliumtitlepagethingheader">
+  <h1 class="myceliumtitlepagethingheader">
+    Mycelium
+  </h1>
+</div> -->
+<div class="stuffyoucando">
+  <div class="stuff" style="background-image: url('assets/MainPage/Band.png')">
   </div>
-  {%- endif -%}
+  <div class="can">
+    <div class="wrapper">
+      <h1>Band Together</h1>
+      <p>Join new servers, meet new players and frick gamer girls. Generated maps with new places to explore and <span class="lore">d e e p e s t  l o r e</span> you are bound to make friends and great adventures. Or maybe you go rogue and kill everyone you see.</p>
+    </div>
+  </div>
+  <div class="stuff" style="background-image: url('assets/MainPage/Grow.png')">
+  </div>
+  <div class="can">
+    <div class="wrapper">
+      <h1>Grow Together</h1>
+      <p>Build bases, farm, kill great monsters. In a world of magic and fantasy with sword fighting and thrown food, the potential to grow with others is infinite. Your swordfighting alone cannot defeat everything that comes in your way but with others you have more than just you.</p>
+    </div>
+  </div>
+  <div class="stuff" style="background-image: url('assets/MainPage/Love.png')">
+  </div>
+  <div class="can">
+    <div class="wrapper">
+      <h1>Love together</h1>
+      <p>Creating food, bases and great weapons can bring everyone together for greater loot. "Invite" Players or NPCs to your houses or dungeons. </p>
+    </div>
+  </div>
+</div>
+
+<div class="home">
+  <div class="wrapper">
+
+    {%- if site.posts.size > 0 -%}
+    <h2 class="mycelium post-list-heading">Devblogs</h2>
+    <p><span class="warninglore">Posts are still being updated to they new devblog system</span></p>
+    <div class="mycelium post-list">
+      {%- for post in site.posts limit:2-%}
+      <div>
+        <div>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="mycelium post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="mycelium post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+          <a class="mycelium post-read" href="{{ post.url | relative_url }}">
+            -read more-
+          </a>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<div class="stuffyoucando">
+  <div class="tab">
+    <div class="left">
+      <h1>Join us on discord</h1>
+      <p>Talk to the developers directly, spam them for a key and talk to other gamers. <a href="https://discord.gg/TadyTye"><span class="lore">Join Discord Server</span></a></p>
+    </div>
+      <div class="right">
+        <h1>Follow us Twitter</h1>
+        <p>On <a href="https://twitter.com/PropertyDmg"><span class="lore">@PropertyDmg</span></a> you can find our most refined topnotch ultimate posts.</p>
+      </div>
+  </div>
+</div>
 
 </div>

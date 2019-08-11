@@ -4,8 +4,6 @@ title: "Legendary Devblog"
 date: "2018-05-19 00:01"
 ---
 
-## Second Devblog
-
 We are just getting started on our project and we already have made lots of progress this week.
 <!--more-->
 
