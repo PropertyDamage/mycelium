@@ -234,6 +234,7 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  margin-top: 80px;
 }
 
 .post-title {
@@ -291,9 +292,9 @@ span.warninglore {
   color: #ffffff;
 }
 
-.mycelium.post-list-heading {
+.post-list-heading {
   @include relative-font-size(1.75);
-  padding-top: 50px;
+  margin-top: 80px;
 }
 
 .mycelium.post-list {
