@@ -51,6 +51,7 @@
 
     &:hover {
       background: #fe2c2c;
+      text-decoration: none;
     }
   }
 
@@ -58,15 +59,21 @@
     float: right;
 
     .social_nav {
-      padding: 5px;
+      padding: 5px 10px;
 
       .svg-icon {
         padding: 0;
         fill: #ffffff;
+        width: 32px;
+        height: 32px;
 
-        &:hover {
-          fill: #fe2c2c;
+        use {
+          transform: scale(1.5);
         }
+      }
+
+      &:hover svg {
+        fill: #fe2c2c;
       }
     }
   }
