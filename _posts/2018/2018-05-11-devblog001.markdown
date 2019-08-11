@@ -4,8 +4,6 @@ title: "Our Project"
 date: "2018-05-11 00:01"
 ---
 
-## The Introduction to our project
-
 Since this is our first devblog, we though we'd do more of an introduction and explain what our goal and direction is etc.
 <!--more-->
 
