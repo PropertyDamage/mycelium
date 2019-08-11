@@ -15,7 +15,7 @@ $table-text-align: left !default; // Width of the content area
 $content-width: 800px !default;
 $on-palm: 600px !default;
 $on-laptop: 800px !default; // Use media queries like this:
-// @include media-query($on-palm) {
+$screen-height: 100vh; // @include media-query($on-palm) {
 //   .wrapper {
 //     padding-right: $spacing-unit / 2;
 //     padding-left: $spacing-unit / 2;
@@ -29,7 +29,10 @@ $on-laptop: 800px !default; // Use media queries like this:
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+@mixin min-relative-to-window-height($ratio) {
+  min-height: $screen-height * $ratio;
+}
 // Import partials.
-@import "propertydmg/base", "propertydmg/layout", "propertydmg/syntax-highlighting";
-// Import External Fonts
+@import "propertydmg/base", "propertydmg/layout", "propertydmg/syntax-highlighting"; // Import External Fonts
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond|Roboto:400,900");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap');

@@ -2,11 +2,16 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  // border-top: 5px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 2;
   // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  background: #00000000;
+  z-index: 1000;
+  padding-top: 20px;
+  width: 100%;
+  transition: padding 0.3s ease-out, background 0.3s ease-out;
 }
 
 .site-title {
@@ -15,7 +20,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
+  float: right;
 
   &,
   &:visited {
@@ -24,8 +29,7 @@
 }
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $base-line-height * $base-font-size * 2;
 
   .nav-trigger {
     display: none;
@@ -38,9 +42,32 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+    padding: 20px;
+    min-height: $base-line-height * $base-font-size * 2;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    &:hover {
+      background: #fe2c2c;
+    }
+  }
+
+  .site-social {
+    float: right;
+
+    .social_nav {
+      padding: 5px;
+
+      .svg-icon {
+        padding: 0;
+        fill: #ffffff;
+
+        &:hover {
+          fill: #fe2c2c;
+        }
+      }
     }
   }
   @include media-query($on-palm) {
@@ -256,25 +283,10 @@ span.warninglore {
   border-radius: 5px;
   color: #ffffff;
 }
-// h1.myceliumtitlepagethingheader {
-//   flex-grow: 1;
-//   font-family: cursive;
-//   -webkit-font-smoothing: antialiased;
-//   text-rendering: optimizeLegibility;
-//   color: #ffffff;
-//   @include relative-font-size(10.00);
-// }
-//
-// div.myceliumtitlepagethingheader {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   flex-wrap: nowrap;
-// }
 
 .mycelium.post-list-heading {
   @include relative-font-size(1.75);
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .mycelium.post-list {
@@ -283,6 +295,7 @@ span.warninglore {
   align-items: baseline;
   flex-wrap: wrap;
   height: 300px;
+  padding: 50px 0;
 
   > div {
     display: flex;
@@ -356,7 +369,7 @@ span.warninglore {
   flex-direction: column;
   align-items: stretch;
   flex-wrap: nowrap;
-  // height: 2160px;
+
   > .stuff {
     flex-grow: 2;
     display: flex;
@@ -368,7 +381,7 @@ span.warninglore {
     background-clip: content-box;
     background-repeat: no-repeat;
     filter: grayscale(0.8);
-    min-height: 300px;
+    @include min-relative-to-window-height(0.7);
   }
 
   > .can {
@@ -376,7 +389,8 @@ span.warninglore {
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-height: 300px;
+    padding: 20px 0;
+    @include min-relative-to-window-height(0.3);
 
     &:nth-child(3n) {
       background: linear-gradient(217deg, #93032e, #93032e00 80%), linear-gradient(127deg, #bb2552, #bb255200 80%), linear-gradient(336deg, #86213f, #86213f00 80%);
@@ -415,15 +429,42 @@ span.warninglore {
     background: linear-gradient(to left, #1da1f2, #7289DA);
 
     .left {
-      align-self: stretch;
+      flex-grow: 1;
       padding: 10% 2%;
       text-align: right;
     }
 
     .right {
-      align-self: stretch;
+      flex-grow: 1;
       padding: 10% 2%;
       text-align: left;
+    }
+  }
+
+  .myceliumtitlepagethingheader {
+    min-height: $screen-height;
+    display: flex;
+    align-items: center;
+
+    div {
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      flex-grow: 5;
+      font-family: "Open Sans";
+      font-weight: 800;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      color: #ffffff;
+      @include relative-font-size(5.00);
+    }
+
+    p {
+      flex-grow: 1;
     }
   }
 }

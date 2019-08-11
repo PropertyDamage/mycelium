@@ -1,0 +1,11 @@
+docs_list_title: Navigation Thingy
+docs:
+
+- title: Mycelium
+  url: /index
+
+- title: Devblog
+  url: /devblog
+
+- title: Commits
+  url: /commits
