@@ -17,9 +17,9 @@ title:            Mycelium
 author:           Property Damage
 email:            support@propertydmg.co.uk
 description:      >- # this means to ignore newlines until "baseurl:"
-  We make games you actually play.
+  Swordfighting, spells, food and gamer girls
 baseurl:          "" # the subpath of your site, e.g. /blog
-url:              "https://www.propertydmg.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+url:              "https://mycelium.propertydmg.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: PropertyDmg
 github_username:  PropertyDamage
 show_excerpts: true
